@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function () {
+            $("#btnClick").click(function () {
+                // $.get(url,data,callback,type)
+                $.get("/02-get",function (resText) {
+                    $.each(resText,function (i,obj) {
+                        console.log("用户名："+obj.uname);
+                        console.log("邮箱："+obj.uemail)
+                    })
+                },'json');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btnClick">AJAX GET请求</button>
+</body>
+</html>

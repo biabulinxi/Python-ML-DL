@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <p>
+        用户名：<input type="text" id="name">
+        <button onclick="btnClick()">异步请求</button>
+    </p>
+    <div id="show"></div>
+    <script src="js/common.js"></script>
+    <script>
+        function btnClick() {
+            var xhr = createXhr();
+            var name = document.getElementById("name").value;
+            xhr.open('get',"/02-server/"+name,true);
+            xhr.onreadystatechange = function () {
+                // 判断readystate为4且status为200的时候，再接收响应数据
+                if(xhr.readyState==4 && xhr.status==200){
+                   // 将响应数据显示在id为show的元素中
+                    document.getElementById("show").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(null)
+        }
+
+
+    </script>
+</body>
+</html>

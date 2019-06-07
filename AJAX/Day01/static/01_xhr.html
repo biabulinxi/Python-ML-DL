@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <h2>这是静态文件，该文件不支持服务端的内容</h2>
+    {{ uname }}
+    <script src="js/common.js"></script>
+    <script>
+
+        window.onload = function () {
+            // 调用并接受createXhr
+            var xhr = createXhr();
+            console.log(xhr)
+        }
+
+    </script>
+</body>
+</html>

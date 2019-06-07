@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function () {
+            $("#btnJson").click(function () {
+                /*var obj={
+                    "name":"wangwc",
+                    "age":37,
+                    "gender":"男"
+                };*/
+                var arr = [
+					{
+					"name":"wangwc",
+                    "age":37,
+                    "gender":"男"
+					},
+					{
+					"name":"wangwc",
+                    "age":34,
+                    "gender":"男"
+					},
+					{
+					"name":"wangwc",
+                    "age":48,
+                    "gender":"男"
+					},
+                ];
+                // 循环遍历取出
+                /*
+                for(var i = 0; i < arr.length;i++){
+                    console.log("姓名:"+arr[i].name);
+                    console.log("年龄:"+arr[i].age);
+                    console.log("性别:"+arr[i].gender);
+                }
+                */
+
+                // 使用$(arr).each
+                /*
+                $(arr).each(function (i,obj) {
+                    console.log("下标:"+i);
+                    console.log("姓名:"+obj.name);
+                    console.log("年龄:"+obj.age);
+                    console.log("性别:"+obj.gender);
+                });
+                */
+
+                // 使用$.each
+                $.each(arr,function (i,obj) {
+                    console.log("下标:"+i);
+                    console.log("姓名:"+obj.name);
+                    console.log("年龄:"+obj.age);
+                    console.log("性别:"+obj.gender);
+                });
+            });
+
+            $("#btnUser").click(function () {
+                var xhr = createXhr();
+                xhr.open("get",'/03-json', true);
+                xhr.onreadystatechange=function () {
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var resText = xhr.responseText;
+                        // 将restext转换成json
+                        var  arr = JSON.parse(resText);
+                        // $.each() 遍历
+                        $.each(arr, function (i, obj) {
+                            console.log("姓名:"+obj.name);
+                            console.log("密码:"+obj.upwd);
+                            console.log("邮箱:"+obj.uemail);
+                        })
+
+                    }
+                };
+                xhr.send(null)
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <button id="btnJson">测试json</button>
+    <button id="btnUser">获取Users</button>
+</body>
+</html>

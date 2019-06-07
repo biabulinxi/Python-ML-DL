@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+
+        /*
+        * 服务器端在响应的时候调用process_resp函数
+        * 将 响应的数据 作为函数的参数
+        * */
+        function process_resp(msg) {
+            alert(msg);
+        }
+
+        $(function () {
+            // 演示：同源策略
+            /*
+            $("#btnSend").click(function () {
+                var url = "http://127.0.0.1:5000/05-server";
+                $.get(url,function (data) {
+                    alert(data)
+                })
+            });
+            */
+
+            // 演示: 非同源跨域
+            /*
+            * 方案：
+            *  1.<script>向服务端发送请求
+            *  2.服务端响应回js代码文本
+            * */
+            /*
+            $("#btnSend").click(function () {
+                // 1. 动态创建<script>元素
+                var script=document.createElement("script");
+                // 2. 为 script 元素设置属性 - type
+                script.type = "text/javascript";
+                // 3. 为 script 元素设置属性 - src(等同于设置请求地址)
+                script.src = "http://127.0.0.1:5000/05-server?callback=process_resp";
+                // 4. 将script元素加载到DOM树上(加载到网页中)，向 src 的请求地址发送请求并接受响应
+                var body = $("body")[0];  // 获取body元素
+                body.append(script);  // 等同于向 src 发送请求
+            });
+            */
+
+            // 使用JQ发送跨域请求
+            $("#btnJQ").click(function () {
+                $.ajax({
+                    url: 'http://127.0.0.1:5000/05-server',
+                    type: 'get',
+                    dataType: 'jsonp',
+                    success: function (data) {
+                        alert(data)
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>
+            <button id="btnSend">发送请求</button>
+            <button id="btnJQ">使用JQ发送跨域请求</button>
+        </p>
+    </div>
+</body>
+</html>
