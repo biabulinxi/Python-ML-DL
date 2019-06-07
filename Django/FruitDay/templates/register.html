@@ -1,0 +1,50 @@
+{% extends 'login.html' %}
+{% block content %}
+    <div id="container">
+        <!-- 1. 顶部标题 -->
+        <h2>会员注册</h2>
+        <!-- 2. 主体 -->
+        <div id="main">
+            <div class="left">
+                <img src="../static/images/huiyuan.jpg">
+                <a href="">会员登录</a>
+            </div>
+            <div class="right" style="margin-top: 0px">
+                <form action="/register/" method="post" enctype="">
+                    {% csrf_token %}
+                    <div class="form-line">
+                        <p>手机号</p>
+                        <input type="text" name="uphone" class="uinput">
+                    </div>
+                    <div>{{ errmsg }}</div>
+                    <div class="form-line">
+                        <p>密码</p>
+                        <input type="password" name="upwd" class="uinput" placeholder="请输入6-20位字符">
+                    </div>
+                    <div class="form-line">
+                        <p>确认密码</p>
+                        <input type="password" name="upwd" class="uinput" placeholder="请输入6-20位字符">
+                    </div>
+                    <div class="form-line">
+                        <p>用户名</p>
+                        <input type="text" name="uname" class="uinput" value="{{ uname }}">
+                    </div>
+                    <div class="form-line">
+                        <p>邮箱</p>
+                        <input type="text" name="uemail" class="uinput" value="{{ uemail }}">
+                    </div>
+
+                    <div class="form-line">
+                        <p></p>
+                        <div>
+                            <input type="submit" value="注册" class="loginBtn btn">
+                            <a href="" class="registBtn btn">会员登录</a>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

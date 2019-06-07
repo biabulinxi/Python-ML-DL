@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <form action="https://www.baidu.com/s">
+        产品名称：<input type="text" name="wd">
+        <input type="submit">
+        <input type="button" value="普通按钮" onclick="btn()">
+    </form>
+    <script>
+        function btn() {
+            var pname = document.getElementsByName("wd")[0].value;
+            location.href="/11-get/?pname="+pname
+        }
+    </script>
+</body>
+</html>

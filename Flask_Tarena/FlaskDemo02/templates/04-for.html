@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .red{background:red;}
+    .yellow{background:yellow;}
+    .pink{background:pink;}
+  </style>
+</head>
+<body>
+ <!-- 循环遍历params.list -->
+ <ul>
+   {% for name in params.list %}
+   <li
+    {% if loop.index % 2 == 1 %}
+      class="red"
+    {% else %}
+      class="yellow"
+    {% endif %}
+   >
+     <h2>{{name}}</h2>
+   </li>
+   {% endfor %}
+ </ul>
+ <!-- 循环遍历 params.dic.keys() -->
+ {% for key in params.dic.keys() %}
+  <p>{{key}}</p>
+ {% endfor %}
+ <!-- 循环遍历 params.dic.values() -->
+ {% for value in params.dic.values() %}
+  <p>{{value}}</p>
+ {% endfor %}
+ <!-- 循环遍历 params.dic.items() -->
+ {% for key,value in params.dic.items() %}
+  <p
+    {% if loop.first %}
+      class="red"
+    {% elif loop.last %}
+      class="yellow"
+    {% else %}
+      class="pink"
+    {% endif %}
+  >{{key}}:{{value}}</p>
+ {% endfor %}
+</body>
+</html>

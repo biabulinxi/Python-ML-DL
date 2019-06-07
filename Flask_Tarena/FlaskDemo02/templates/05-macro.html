@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .red{
+      background: #f00;
+    }
+    .yellow{
+      background: #f0f;
+    }
+  </style>
+</head>
+<body>
+  {% macro showP(str) %}
+    <p style="background:orangered;">
+      {{str}}
+    </p>
+  {% endmacro %}
+
+  {% for name in params.list %}
+    {{showP(name)}}
+  {% endfor %}
+
+  <h1>以下是调用的宏的内容</h1>
+  {% import 'macro.html' as macros %}
+  <ol>
+    {{macros.showList(params.list)}}
+  </ol>
+</body>
+</html>

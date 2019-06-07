@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+<body>
+
+    <table border="1px">
+        <tbody>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>邮箱</th>
+            <th>删除</th>
+        </tr>
+        {% for au in authors %}
+            <tr>
+                <td>{{ au.name }}</td>
+                <td>{{ au.age }}</td>
+                <td>{{ au.email }}</td>
+                <td><a href="/06-delete/{{ au.id }}">删除</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

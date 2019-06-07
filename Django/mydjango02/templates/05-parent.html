@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <h2>
+        <a href="{% url 'auth' %}">访问 auth</a>
+    </h2>
+    <h2>
+        <a href="{% url 'birth' '1990' '2' '15'%}">访问 birth</a>
+    </h2>
+
+    <h2>这是parent.HTML中的内容</h2>
+    <h2>
+        {% block content %}
+        这是parent中允许被子模板修改的内容
+        {% endblock %}
+    </h2>
+    <ul>
+        {% for name in list %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

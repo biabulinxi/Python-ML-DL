@@ -1,0 +1,15 @@
+{% macro showList(list) %}
+  {% for str in list %}
+    <li
+      {% if loop.index % 2 == 0 %}
+        class="red"
+      {% else %}
+        class="yellow"
+      {% endif %}
+    >{{str}}</li>
+  {% endfor %}
+{% endmacro %}
+
+{% macro test(str) %}
+  <li>{{str}}</li>
+{% endmacro%}

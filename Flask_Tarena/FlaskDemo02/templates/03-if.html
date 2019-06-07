@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <h2>姓名:{{params.name}}</h2>
+  <h2>年龄:{{params.age}}</h2>
+  <!-- 判断年龄区间 30以下输出年轻人,30-60之间输出中年人,60以上老年人 -->
+  <h2>
+    段位:
+    {% if params.age < 30 %}
+      {{params.name}}是<b>年轻人</b>
+    {% elif params.age > 60 %}
+      {{params.name}}是老年人
+    {% else %}
+      {{params.name}}是中年人
+    {% endif %}
+  </h2>
+</body>
+</html>

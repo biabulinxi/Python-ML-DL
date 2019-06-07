@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>这是parent中的头部内容</h1>
+    <div>
+        {% block content %}
+        <h1>这是parent中的主体内容</h1>
+        {% endblock %}
+    </div>
+    <h1>这是parent中的底部内容</h1>
+</body>
+</html>

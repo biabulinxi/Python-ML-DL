@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <h2>使用静态文件路径访问</h2>
+    <img src="../static/img/蔡文静.jpg" alt="">
+    <h2>使用static标签访问静态文件</h2>
+    {% load static %}
+    <img src="{% static "img/蔡文静.jpg" %}" alt="">
+</body>
+</html>

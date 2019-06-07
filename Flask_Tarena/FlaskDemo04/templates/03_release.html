@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <form action="/03_release" method="post" enctype="multipart/form-data">
+        <div>
+            <p>
+                博客标题
+                <input type="text" name="title">
+            </p>
+            <p>
+                博客类型
+                <select name="type" id="">
+                    <option value="个人博客">个人博客</option>
+                    <option value="公开博客">公开博客</option>
+                    <option value="其他博客">其他博客</option>
+                </select>
+            </p>
+            <p>
+                上传图片
+                <input type="file" name="uimg">
+            </p>
+            <p>
+                内容
+                <textarea name="content" id="" cols="30" rows="10">
+                </textarea>
+            </p>
+            <p>
+                <input type="submit" name="submit">
+            </p>
+        </div>
+    </form>
+</body>
+</html>
