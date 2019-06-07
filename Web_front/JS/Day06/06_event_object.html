@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script>
+        window.onload = function () {
+            var h1 = document.getElementsByTagName('h1')[0];
+            h1.style.width = "200px";
+            h1.style.height = "200px";
+            h1.style.background = "red";
+            h1.onclick = function (evt) {
+                console.log(evt.offsetX, evt.offsetY);
+                console.log(evt.clientX, evt.clientY);
+                console.log(evt.screenX, evt.screenY);
+            };
+
+            onkeyup = function (evt) {
+                console.log("onkeyup",evt.which, evt.key)
+            };
+            onkeydown = function (evt) {
+                console.log("onkeydown",evt.which, evt.key)
+            };
+            onkeypress = function (evt) {
+                console.log("onkeypress",evt.which, evt.key)
+            };
+
+        };
+    </script>
+
+</head>
+<body>
+    <h1>一级标题</h1>
+</body>
+</html>

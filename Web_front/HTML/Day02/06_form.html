@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>From</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <form action="login.py" method="get"
+          enctype="application/x-www-form-urlencoded">
+        <p>
+            用户姓名：
+            <input type="text" name="username" maxlength="10"
+                   placeholder="请输入用户名">
+        </p>
+        <p>
+            用户密码：
+            <input type="password" name="password" maxlength="6"
+                   placeholder="请输入密码">
+        </p>
+        <p>
+            购买数量：
+            <span>-</span>
+            <input type="text" name="count" value="1">
+            <span>+</span>
+        </p>
+        <p>
+            用户性别：
+            <input type="radio" name="sex" value="male" checked> 男士
+            <input type="radio" name="sex" value="female"> 女士
+        </p>
+        <p>
+            用户兴趣：
+            <input type="checkbox" name="hobby" value="smoke"> 抽烟
+            <input type="checkbox" name="hobby" value="drink"> 喝酒
+        </p>
+
+    </form>
+
+</body>
+</html>

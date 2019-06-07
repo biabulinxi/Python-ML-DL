@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+    <style>
+        h1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            overflow: auto;
+
+        }
+        h2{
+            width: 0px;
+            height: 0px;
+            /* rgba(0,0,0,0) */
+            border: 20px solid transparent;
+            border-top: 20px solid red;
+        }
+        div{
+            width: 300px;
+            height: 150px;
+            background-color: red;
+            border-radius: 30px 50px 60px;
+            /*box-shadow:offsetX offsetY blur spread color;*/
+            /*偏偏糊拉色*/
+            box-shadow: -20px 10px  50px 10px blue;
+
+        }
+        *{
+            margin: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>
+        一级标题块元素，默认宽度与父元素保持一致，
+        可手动设置宽高，并独占一行不与其他元素工行
+    </h1>
+    <h2>
+        <!--网页三角标，宽高需设置为0，设置透明和要显示的边框-->
+    </h2>
+    <div>
+        <!--倒圆角-->
+    </div>
+
+</body>
+</html>

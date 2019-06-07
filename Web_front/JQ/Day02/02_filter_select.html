@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h1>"名诗两首"</h1>
+        <p class="c1">"凡发生地发"</p>
+        <p class="c2">"今收到开发概况"</p>
+        <p class="c1">"啊芙蓉江阿荣"</p>
+        <p class="c1">"哈覅哦啊发"</p>
+        <p class="c2">"爱福家加法"</p>
+        <p class="c1">"案发hi人的欧夫人hi饿哦我"</p>
+        <button onclick="odd()">odd</button>
+        <button onclick="even()">even</button>
+        <button onclick="eq()">等于</button>
+        <button onclick="lt()">小于</button>
+        <button onclick="gt()">大于</button>
+        <button onclick="not()">匹配除 c1 以外的所有元素</button>
+
+    </div>
+    <script>
+        /*
+        // 匹配标签A首次和最后出现的元素
+        $("p:first").css("background","pink");
+        $("p:last").css("background","green");
+        */
+
+        // 按下标匹配，奇数和偶数下标对应的元素
+        function odd() {
+            $("p:odd").css("color","red")
+        }
+        function even() {
+            $("p:even").css("color","blue")
+        }
+
+        // 下标匹配,从 0 开始
+        function eq() {
+            $("p:eq(4)").css("color","red")
+        }
+        function lt() {
+            $("p:lt(4)").css("color","blue")
+        }
+        function gt() {
+            $("p:gt(4)").css("color","green")
+        }
+
+        // 匹配除 c1 以外的所有元素
+        function not() {
+            // $("p:not(.c1)").css("color","orange")
+            $(":not(p)").css("border","2px solid blue")
+        }
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

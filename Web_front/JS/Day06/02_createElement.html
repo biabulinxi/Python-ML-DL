@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        // 创建元素节点
+        var div = document.createElement("div");
+        div.id = "box";
+        div.innerHTML = "动态创建div";
+        console.log(div);
+
+        // 添加节点
+        document.body.appendChild(div);
+
+        var h1 = document.createElement("h1");
+        h1.innerHTML = "动态创建h1";
+        document.body.insertBefore(h1,div);
+
+        // 删除
+        document.body.removeChild(div)
+
+
+
+    </script>
+</body>
+</html>
+
+

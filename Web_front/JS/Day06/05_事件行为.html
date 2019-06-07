@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <style>
+        h1{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            // 等待窗口加载完毕自动执行
+            var h1 = document.getElementsByTagName("h1")[0];
+            console.log(h1)
+
+            // 鼠标事件
+            h1.onmouseover = function () {
+                console.log("鼠标移入");
+            }
+
+            h1.onmousemove = function () {
+                console.log("鼠标移动");
+            }
+
+            h1.onmouseout = function () {
+                console.log("鼠标移出");
+            }
+
+            /*
+            // 键盘事件
+            window.onkeydown = function () {
+                console.log("onkeydown")
+            }
+
+            window.onkeypress = function () {
+                console.log("onkeypress")
+            }
+
+            window.onkeyup = function () {
+                console.log("onkeyup")
+            }
+            */
+
+            // 表单事件
+            var input = document.getElementsByTagName("input")[0];
+            input.onfocus = function () {
+                console.log("获取焦点")
+            };
+            input.onblur = function () {
+                // this 指代函数或方法的调用者
+                console.log("失去焦点", this.value)
+            };
+
+            // 监听输入内容
+            input.oninput = function () {
+                // console.log(this.value)
+            };
+
+            input.onChange = function () {
+                console.log(this.value)
+            };
+
+            // 监听提交
+            var form = document.getElementsByTagName("form")[0];
+            form.onsubmit = function () {
+                // 允许提交布尔值，表示是否可以提交数据
+                if (input.value.length === 0){
+                    return false;
+                }
+                return true;
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    <h1>一级标题</h1>
+    <form action="login.py">
+        <input type="text" name="uname">
+        <input type="submit">
+
+    </form>
+
+
+</body>
+</html>

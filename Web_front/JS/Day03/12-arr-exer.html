@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<Script>
+	
+		//1. 求一组数据中的最大值
+		var arr1 = [13,-6,34,567,-234,99,5,0,66];
+		//定义变量保存最大值
+		var max = arr1[0];
+		for(var i = 0;i < arr1.length; i ++){
+			if(arr1[i] > max){
+				//更新最大值
+				max = arr1[i];
+			}
+		}
+		console.log(max);
+		//2. 对数组中三个元素排序
+		var arr2 = [78,59,46];
+		//第一轮
+		if(arr2[0] > arr[1]){
+			arr2[0] = arr2[0] ^ arr2[1];
+			arr2[1] = arr2[0] ^ arr2[1];
+			arr2[0] = arr2[0] ^ arr2[1];
+		}
+		//第二轮
+
+		//第三轮
+
+
+
+	</script>
+ </body>
+</html>

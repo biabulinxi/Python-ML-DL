@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <button onclick="start()">开始</button>
+    <button onclick="stop()">结束</button>
+    <button onclick="closeWindow()">关闭窗口</button>
+
+    <script>
+        function start() {
+            timer = setInterval(function () {
+                var date = new Date();
+                console.log(date)
+            },1000)
+
+        }
+
+        function stop() {
+            clearInterval(timer)
+
+        }
+
+        function closeWindow() {
+            var res = confirm("是否关闭");
+            if (res){
+                setTimeout(function () {
+                    window.close();
+                },3000)
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

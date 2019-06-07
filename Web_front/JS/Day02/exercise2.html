@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <script>
+        var char = prompt("请输入一个字符");
+        // 数字判断 0~9
+        var isNum = char >= 0 && char <= 9
+        console.log(char + "是数字吗？",isNum)
+        // 中文判断 \u4e00 ~ \u9fa5
+        var isChn = char >= "\u4e00" && char <= "\u9fa5"
+        console.log(char + "是中文吗？",isChn)
+        // 英文判断 a~z A~Z
+        var isEgl = (char >= "a" && char <= "z") || (char >= "A" && char <= "Z")
+        console.log(char + "是英文吗？",isEgl)
+    </script>
+</body>
+</html>

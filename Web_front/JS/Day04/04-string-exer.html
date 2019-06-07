@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<button onclick="validate()">验证</button>
+	<Script>
+		function validate(){
+			//1. 定义数据源
+			var arr = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','A','T','Y','D','U','P'];
+			//2. 生成随机四位验证码
+			var show = "";
+			for(var i = 0; i < 4;i ++){
+				//生成随机下标[0,1) -> [0,10) 9.999
+				var index = parseInt(Math.random()*arr.length);
+				show += arr[index];
+			}
+			//3. 提示输入并验证
+			var input = prompt("请输入验证码(不区分大小写):"+show);
+			if(input.toUpperCase() == show.toUpperCase()){
+				alert("输入正确");
+			}else{
+				alert("输入有误");
+			}
+		}
+
+		// 分割字符串
+        var s4 = "2018-12-12"
+        var r7 = s4.split("-")
+        console.log(r7, s4)
+
+
+	</script>
+ </body>
+</html>

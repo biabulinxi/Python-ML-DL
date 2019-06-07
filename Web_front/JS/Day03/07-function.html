@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+		//1. 无参数无返回值的函数
+		function f1() {
+			console.log("无参数无返回值的函数");
+		}
+		f1(); //函数调用
+
+		//2. 有参数无返回值的函数
+		function f2(a){ //形式参数
+			console.log(a);
+			//JS中函数允许实际参数与形式参数个数不匹配,可以借助函数内部的arguments查看实际参数
+			//console.log(arguments);
+		}
+		f2(100); //实际参数:函数调用时,将实际参数赋值给形式参数,参与函数体的运算
+		f2();
+		f2(20,30);
+
+		//3. 有参数有返回值
+		function f3 (a,b){
+			var res = a + b;
+			return res;
+		}
+		var r = f3(10,10); //接收返回值
+		console.log(r);
+		//1. return 只能返回一个值
+		function f4(a,b){
+			//只能返回 b
+			return a,b;
+			//2. return 关键字后面的代码不执行,一般将return写在末尾,或是控制函数体的执行
+			console.log(a,b);
+		}
+		var r1 = f4(30,40);
+		console.log(r1);
+
+		//4. 匿名函数
+		var fn = function (){
+			alert("匿名函数");
+		};
+		console.log(fn);
+		//fn();
+		//匿名函数自执行
+		(function(a,b){
+			alert(a+b);
+		})(100,200);
+
+
+
+
+	
+	</script>
+ </body>
+</html>

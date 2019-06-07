@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <script>
+        // 创建正则表达式
+        var reg1 = /知乎/g;
+        var reg2 = /^\d{6}/ig;
+
+        var reg3 = new RegExp("知乎");
+        var reg4 = new RegExp("\\d{6}","g");
+        console.log(reg1, reg2, reg3, reg4)
+
+        var str = "hello1234567890"
+        // 验证
+        console.log(reg4.lastIndex)
+        var r1 = reg4.test(str)
+        console.log(r1,reg4.lastIndex)
+
+        // 手动调整 lastIndex , 保证下一此匹配从 0 开始
+        regx.lastIndex = 0
+        var r2 = reg4.test(str)
+        console.log(r2,reg4.lastIndex)
+
+        var r3 = reg4.test(str)
+        console.log(r3,reg4.lastIndex)
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

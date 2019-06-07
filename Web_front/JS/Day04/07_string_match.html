@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <script>
+        var str = "上知乎，搜知乎，问知乎，答知乎";
+        var r1 = str.match("知乎");
+        console.log(r1)
+
+        // 正则匹配
+        var reg1 = /知乎/g;
+        var r2 = str.match(reg1);
+        console.log(r2);
+
+        //替换
+        var r3 = str.replace(reg1, "达内");
+        console.log(r3,str)
+
+
+
+    </script>
+</body>
+</html>

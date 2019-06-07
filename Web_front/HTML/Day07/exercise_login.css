@@ -1,0 +1,131 @@
+
+
+
+/*设置默认样式*/
+body,
+h2,
+p{
+    margin: 0;
+    color: #999;
+}
+a{
+    text-decoration: none;
+}
+
+/*外部容器*/
+#container{
+    width: 990px;
+    margin: 0 auto;
+}
+
+/*顶部标题*/
+h2{
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+/*主体*/
+#main{
+    /*解决子元素浮动造成父元素高度为0*/
+    overflow: hidden;
+}
+/*左列*/
+#main .left{
+    float: left;
+    position: relative;
+}
+.left a{
+    position: absolute;
+    right: 173px;
+    bottom: 20px;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #64A131;
+    border-radius: 5px;
+    color: #64A131;
+    font-size: 20px;
+}
+
+
+/*右列*/
+#main .right{
+    float:right;
+    margin-top: 70px;
+    margin-right: 40px;
+}
+
+.form-line{
+    margin-bottom: 30px;
+}
+/*子代选择器，直接选择子代元素，而不是所有后代元素*/
+.form-line>p{
+    /*input上移占位环绕*/
+    float: left;
+    width: 64px;
+    height: 40px;
+    text-align: right;
+    line-height: 40px;
+    margin-right: 40px;
+}
+.form-line>.uinput{
+    /*修改元素盒模型计算方式*/
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*调整输入框默认字体13.3*/
+    font-size: 16px;
+    outline: none;
+}
+
+/*第三行*/
+.form-line>div>p{
+    float: right;
+}
+.form-line .isSave{
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.form-line>div>P>a{
+    color: #999999;
+}
+
+/*第四行按钮*/
+.form-line .btn{
+    width: 140px;
+    height: 40px;
+    border: 1px solid #64A131;
+    border-radius: 5px;
+
+}
+.loginBtn{
+    background: #64A131;
+    color: #fff;
+    font-size: 20px;
+}
+.registerBtn{
+    /*修改元素盒模型计算方式*/
+    box-sizing: border-box;
+    float: right;
+    color: #64A131;
+    background: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 38px;
+}
+
+
+
+
+
+
+
+
+

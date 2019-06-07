@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+
+    <input type="text" name="uinput">
+    <button onclick="submit()">提交</button>
+    <div class="output"></div>
+
+    <script>
+        function submit() {
+            // 获取节点
+            var input = document.getElementsByName("uinput")[0];
+            var output = document.getElementsByClassName("output")[0];
+
+            // 传值
+            output.innerHTML = "<h1>" + input.value + "</h1>"
+
+        }
+
+    </script>
+</body>
+</html>

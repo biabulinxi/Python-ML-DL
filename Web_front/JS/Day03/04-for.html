@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+		for(var i = 1; i <= 10 ; i ++){		
+			if(i == 3){
+				//break;
+				continue;
+			}
+			console.log(i);
+		}
+		//素数判断
+		var input = prompt("请输入一个数字");
+		var isSu = true;
+		//只能被1和自身整除 2 ~ n-1
+		for(var i = 2;i < input;i ++){
+			if(input % i == 0){
+				console.log("不是素数");
+				isSu = false;
+				break;
+			}
+		}
+		if(isSu){
+			console.log(input,"是素数");
+		}else{
+			console.log(input,"不是素数");
+		}
+		
+
+
+
+	</script>
+ </body>
+</html>

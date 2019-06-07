@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <script>
+        // 创建字符串
+        let s = "hello";
+        // 查看编码值
+        console.log(s.charCodeAt(1));
+        let s1 = "张三";
+        console.log(s1.charCodeAt(0));
+        // 将unicode码转换成16进制
+        let code = s1.charCodeAt(0);
+        console.log(code.toString(16)); //5f20
+        console.log("\u5f20"); //5f20 添加\u转汉子
+
+        var a = 10;
+        console.log(typeof a,s);
+
+
+    </script>
+</body>
+</html>

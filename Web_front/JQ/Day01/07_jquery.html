@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../../JS/web.ico" type="image/x-icon">
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <p id="d1">段落</p>
+    <input type="text" name="uname">
+    <button onclick="show()">点击</button>
+
+    <script>
+        // 获取元素节点
+        var h1s = $("h1");  //返回数组
+        console.log(h1s);
+        var p = $("d1");
+        console.log(p);
+
+        // 操作内容
+        $("h1").innerHTML = "动态修改";
+        $("h1").html("<a href='#'>动态修改</a>");
+
+        $("p").text("<a href='#'>动态修改</a>");
+
+        function show() {
+            // value
+            var text = $("input").val();
+            console.log(text);
+        }
+
+        // JS 转 JQ
+        var h1 = document.getElementsByTagName("h1")[0];
+        console.log(h1);
+        console.log($(h1));
+        // JQ 转 JS
+        console.log($("h1")[0]);
+        console.log($("h1").get(0));
+
+
+    </script>
+
+</body>
+</html>

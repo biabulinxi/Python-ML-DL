@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+		//i表示第一个操作数
+		for(var i = 1; i <= 9; i ++){
+			var show = "";
+			//j表示第二个操作数
+			for(var j = 1; j <= i; j ++){
+				show += j + "*" + i + "=" + i*j + "\t";
+			}
+			console.log(show);
+		}
+
+		//打印星星图案
+		for(var i = 1; i< 6; i ++){
+			var show = "";
+			//每一行中循环打印星星
+			for(var j = 1; j <= i; j++){
+				show += "*";
+			}
+			//按行输出
+			console.log(show);
+		}
+	
+	</script>
+ </body>
+</html>

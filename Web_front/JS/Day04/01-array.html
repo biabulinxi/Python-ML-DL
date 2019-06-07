@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<Script>
+		var arr = [1,2,3,4,5,6];
+		console.log(arr.length);
+		//arr.length = 0; //清空数组元素
+		//console.log(arr);
+
+		//toString()
+		var r1 = arr.toString();
+		console.log(r1,typeof r1,arr);
+
+		//join()
+		var r2 = arr.join();
+		var r3 = arr.join('-');
+		console.log(r2,r3);
+
+		//reverse()
+		var arr2 = arr.reverse();
+		console.log(arr2,arr);
+
+		//sort()
+		var array = [12,1,5,50,60,6,0];
+		var r4 = array.sort();
+		console.log(r4,array);
+		//自定义排序算法
+		function sortAsc(a,b){
+			return a-b;
+		}
+		array.sort(sortAsc);
+		console.log(array);
+		//自定义降序
+		array.sort(function (a,b){
+			return b-a;
+		});
+		console.log(array);
+
+		//push()/pop()
+		var res = array.push("hello","world");
+		console.log(res,array);
+		var res2 = array.pop();
+		console.log(res2,array);
+
+		//unshift()/shift()
+		var res3 = array.unshift('a','b');
+		console.log(res3,array);
+		var res4 = array.shift();
+		console.log(res4,array);
+
+		//forEach()
+		array.forEach(function (elem,index){
+			console.log(elem,index);
+		});
+	
+	
+	</script>
+ </body>
+</html>

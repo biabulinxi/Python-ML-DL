@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+		var year = prompt("请输入年");
+		var month = Number(prompt("请输入月"));
+		var day = Number(prompt("请输入日"));
+		var sum = 0; //总天数
+
+		//1. 整年天数的累加 1900 ~ year-1 
+		for(var i = 1900; i < year; i++){
+			sum += 365;
+			//判断闰年
+			if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+				sum += 1;
+			}
+		}
+		//2. 累加当前年中经过的整月 1 ~ month-1
+		for(var j = 1;j < month; j++){
+			switch(i){
+				case 1 :
+				case 3 :
+				case 5 :
+				case 7 :
+				case 8 :
+				case 10 :
+					sum += 31;
+					break;
+				case 4 :
+				case 6 :
+				case 9 :
+				case 11 :
+					sum += 30;
+					break;
+				case 2 :
+					sum += 28;
+					//判断当前年是否为闰年
+					if(year%4==0 && year%100!=0 || year%400==0){
+						sum += 1;
+					}
+					break;
+			}
+		}
+		//3. 累加当前月
+		sum += day; //距离1900-1-1经过的总天数
+		//4. 判断星期
+		var week = sum % 7; //0~6
+		var show = ""; //显示文本
+		switch(week){
+			case 0 :
+				show="星期日"
+				break;
+			case 1 :
+				show="星期一";
+				break;
+			case 2 :
+				show="星期二";
+				break;
+			case 3 :
+				show="星期三"
+				break;
+			case 4 :
+				show="星期四";
+				break;
+			case 5 :
+				show="星期五";
+				break;
+			case 6 :
+				show="星期六";
+				break;
+		}
+		console.log(show);
+
+	
+	</script>
+ </body>
+</html>

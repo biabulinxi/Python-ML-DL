@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+    <style>
+        #d1{
+            color: red;
+        }
+        .c1{
+            background: orange;
+        }
+        .c2{
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>一级标题</h1>
+    <p>段落</p>
+
+    <script>
+        var h1 = document.getElementsByTagName("h1")[0];
+        var p = document.getElementsByTagName("p")[0];
+        // 必须单引号
+        // h1.setAttribute('id','d1');
+        // h1.setAttribute('class','c1');
+        // console.log(h1.getAttribute('id'));
+        // console.log(p.getAttribute('id'));
+        //
+        // p.setAttribute('class','c1');
+        // p.setAttribute('class','c2');
+        //
+        // p.removeAttribute('class')
+
+        h1.id = "d1";
+        h1.className = 'c1';
+        p.className = 'c1','c2';
+
+
+    </script>
+
+</body>
+</html>

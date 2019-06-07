@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <script>
+        var year = prompt("请输入年份");
+        var res = (year % 400 == 0)|| (year % 4 == 0 && year % 100 != 0);
+        console.log(year+"是闰年吗？",res)
+
+    </script>
+</body>
+</html>

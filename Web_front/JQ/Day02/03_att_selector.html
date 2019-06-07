@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h1>"名诗两首"</h1>
+        <p class="c1" id="d1">"凡发生地发"</p>
+        <p class="c2">"今收到开发概况"</p>
+        <p class="c1">"啊芙蓉江阿荣"</p>
+        <p class="c1">"哈覅哦啊发"</p>
+        <p>"爱福家加法"</p>
+        <p id="d2">"案发hi人的欧夫人hi饿哦我"</p>
+
+    </div>
+    <script>
+        /*
+        $("[class]").css("color", "red");
+        $("[class=c1]").css("backgroundcolor", "orange")
+        */
+        $("[id ^= d]").css("backgroundcolor", "orange");
+        $("[class $= 1]").css("border", "5px solid red");
+        $("[class *= 2]").css("border", "5px solid blue");
+        $("[class != c1]").css("color", "yellow");
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

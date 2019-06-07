@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+		//1. 创建数组
+		var arr1 = [];
+		console.log(arr1);
+		var arr2 = [1,2,3];
+		console.log(arr2);
+		var arr3 = new Array();
+		console.log(arr3);
+		var arr4 = new Array(10,20,30);
+		console.log(arr4);
+		var arr5 = [5];
+		var arr6 = new Array(5);
+		console.log(arr5);
+		console.log(arr6);
+		//2. 根据下标读取元素
+		console.log(arr5[0]);
+		//3. 根据下标操作元素
+		arr5[1] = 6;
+		arr5[10] = 10;
+		console.log(arr5);
+
+		//4. for-in遍历数组
+		var array = ['a','b','c'];
+		for(var a in array){
+			console.log(a,array[a]);
+		}
+
+
+	
+	
+	</script>
+ </body>
+</html>

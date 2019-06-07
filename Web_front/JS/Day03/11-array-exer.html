@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+		//1. 数据录入
+		var arr = [];
+		while(true){
+			var input = prompt("请输入数据,exit表示退出");
+			//结束循环的条件
+			if(input == "exit"){
+				break;
+			}
+			//存储数据
+			arr[arr.length] = input;
+		}
+		console.log(arr);
+		//遍历数组
+		for(var i = 0;i < arr.length;i ++){
+			console.log(arr[i]);
+		}
+
+
+	
+	
+	</script>
+ </body>
+</html>

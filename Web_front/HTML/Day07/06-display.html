@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+    <style>
+        #nav{
+            width: 400px;
+            height: 50px;
+            background: pink;
+            font-size: 0px;
+        }
+
+        a{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: orange;
+            font-size: 16px;
+            cursor: default;
+        }
+        #d1,#d2{
+            width: 200px;
+            height: 200px;
+        }
+
+        #d1{
+            background: rgba(255,0,0,.5);
+        }
+        #d1:hover{
+            display: none;
+        }
+
+        #d2{
+            background: green;
+            opacity: .5;
+        }
+        #d2 h1{
+            opacity: .5;
+        }
+
+        input{
+            width: 150px;
+            height: 50px;
+            vertical-align: bottom;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="nav">
+        <!--回车会占用些许像素-->
+        <a href="">首页</a>
+        <a href="">新闻</a>
+        <a href="">热点</a>
+        <a href="">娱乐</a>
+    </div>
+    <div id="d1">第一个div</div>
+    <div id="d2">
+        第二个div
+        <h1>Hello</h1>
+    </div>
+    <span>span</span>
+    <input type="text">
+    <input type="submit">
+
+</body>
+</html>

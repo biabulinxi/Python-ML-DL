@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h1>"名诗两首"</h1>
+        <p class="c1">"凡发生地发"</p>
+        <p class="c2">"今收到开发概况"</p>
+        <p class="c1">"啊芙蓉江阿荣"</p>
+
+    </div>
+    <script>
+        $("P").css("font-size","32px");
+        $("#box").css("background-color",'orange');
+        $(".c1").css("font-weight","700");
+        $("h1,.c1").css("background","pink");
+
+        // 相邻兄弟选择器
+        $("h1+.c1").css("background","red");
+        $("h1+.c2").css("background","red");  // 失效不起作用
+        // 通用兄弟选择器
+        $("h1~.c2").css("background","red");
+
+        // 匹配标签A首次和最后出现的元素
+        $("p:first").css("background","blank");
+        $("p:last").css("background","green");
+
+
+    </script>
+
+</body>
+</html>

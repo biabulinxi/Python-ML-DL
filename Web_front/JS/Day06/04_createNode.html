@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <style>
+        table{
+            border: 1px solid black;
+        }
+        td{
+            width: 150px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <p>
+        <input type="text" uname="gname" placeholder="商品名称">
+        <input type="text" uname="gprice" placeholder="商品价格">
+        <input type="text" uname="gcount" placeholder="商品数量">
+        <button onclick="addGood()">增加</button>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <td>商品名称</td>
+                <td>商品价格</td>
+                <td>商品数量</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+
+
+    </table>
+
+    <script>
+        // 获取元素节点的函数
+        function $(tagName, index) {
+            var elems = document.getElementsByTagName(tagName);
+            return elems[index];
+        }
+
+        function addGood() {
+            // 1. 获取文本内容
+            var gname = $("input", 0).value;
+            var gprice = $("input", 1).value;
+            var gcount = $("input", 2).value;
+            var tbody = $('tbody', 0);
+
+            // 2. 创建和添加
+            var tr = document.createElement("tr");
+            var tdname = document.createElement("td");
+            tdname.innerHTML = gname;
+            var tdPrice = document.createElement("td");
+            tdPrice.innerHTML = gprice;
+            var tdCount = document.createElement("td");
+            tdCount.innerHTML = gcount;
+            var tdOperator = document.createElement("td");
+            // 添加按钮
+            // var updateBtn = document.createElement("button");
+            // updateBtn.innerHTML = "更新";
+            // var deleteBtn = document.createElement("button");
+            // deleteBtn.innerHTML = "删除";
+            // tdOperator.appendChild(updateBtn);
+            // tdOperator.appendChild(deleteBtn);
+
+            tdOperator.innerHTML = "<button>更新</button>" +
+                "<button>删除</button>";
+
+            // 添加数据
+            tr.appendChild(tdname);
+            tr.appendChild(tdPrice);
+            tr.appendChild(tdCount);
+            tr.appendChild(tdOperator);
+            tbody.appendChild(tr)
+
+
+        }
+
+    </script>
+
+</body>
+</html>

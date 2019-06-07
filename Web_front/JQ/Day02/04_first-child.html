@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <ul>
+        <li>大师兄</li>
+        <li>二师兄</li>
+        <li>三师兄</li>
+    </ul>
+
+    <ul>
+        <li>大师兄</li>
+        <li>二师兄</li>
+        <li>三师兄</li>
+    </ul>
+
+    <ul>
+        <li>大师兄</li>
+        <li>二师兄</li>
+        <li>三师兄</li>
+    </ul>
+
+    <input type="radio" value="lalala" checked>
+
+    <script>
+
+        // 在文档中匹配
+        $("li:first").css("border","2px solid black");
+        $("li:last").css("border","2px solid gray");
+
+        // 在子元素中匹配
+        $("li:first-child").css("text-align","center");
+        $("li:last-child").css("text-align","right");
+
+        //
+        console.log($("input").prop("checked"));
+        console.log($("input").attr("checked"));
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

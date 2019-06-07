@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <button onclick="startInterval()">
+        开始倒计时
+    </button>
+    <button onclick="startTimeout()">
+        三秒后开始超时调用
+    </button>
+
+    <button onclick="stopTimeout()">
+        三秒后关闭超时调用
+    </button>
+    <button onclick="start">
+        开始
+    </button>
+    <button onclick="stop">
+        关闭
+    </button>
+
+    <script>
+        function startInterval(){
+            var i = 10;
+
+            var timer = setInterval(function () {
+                if (i < 0){
+                    // 关闭定时器
+                    clearInterval(timer);
+                    return;
+                }
+                console.log(i);
+                i--;
+            },1000);
+        }
+
+        function startTimeout() {
+            timerID = setTimeout(function () {
+                alert("超时调用");
+            },3000)
+        }
+
+        function stopTimeout() {
+            clearTimeout(timerID)
+        }
+
+
+
+        }
+
+    </script>
+</body>
+</html>

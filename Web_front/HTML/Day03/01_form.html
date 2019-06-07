@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>From</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+</head>
+<body>
+    <button>表单外</button> 自定义按钮
+    <form action="login.py" method="get"
+          enctype="application/x-www-form-urlencoded">
+        <p>
+            用户姓名：
+            <input type="text" name="username" maxlength="10"
+                   placeholder="请输入用户名">
+        </p>
+        <p>
+            用户密码：
+            <input type="password" name="password" maxlength="6"
+                   placeholder="请输入密码">
+        </p>
+        <p>
+            购买数量：
+            <span>-</span>
+            <input type="text" name="count" value="1">
+            <span>+</span>
+        </p>
+        <p>
+            用户性别：
+            <input type="radio" name="sex" value="male" checked
+                   id="male"> <label for="male">男士</label>
+            <input type="radio" name="sex" value="female"
+                   id="female"> <label for="female"> 女士</label>
+        </p>
+        <p>
+            用户兴趣：
+            <input type="checkbox" name="hobby" value="study"> 学习
+            <input type="checkbox" name="hobby" value="drink"> 喝酒
+        </p>
+        <p>
+            <input type="hidden" name="userID" value="000001"></input>
+        </p>
+        <p>
+            <input type="file" name="userImag">
+        </p>
+        <P>
+            选择地址：
+            <select name="address">
+                <option value="beijing">北京</option>
+                <option value="shanghai">上海</option>
+                <option value="shanxi">陕西</option>
+            </select>
+        </P>
+        <p>
+            个人介绍：
+            <textarea name="unifo" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit"></input>
+            <input type="reset"></input>
+            <input type="button" value="普通按钮"></input>
+        </p>
+        <button>表单内</button> 带有提交功能
+    </form>
+
+</body>
+</html>

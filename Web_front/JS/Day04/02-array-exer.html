@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<button onclick="decode()">转二进制</button>
+	<Script>
+		function decode(){
+			var n = prompt("请输入整数");
+			var arr = [];
+			while(n != 0){
+				//取余 arr.unshift()
+				arr.push(n % 2);
+				//重新设置被除数,参与下一次除2
+				n = parseInt(n / 2);
+			}
+			console.log(arr.reverse().join(''));
+		}
+	
+	</script>
+ </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico"
+          type="image/x-icon">
+
+</head>
+<body>
+    <p>段落标签1</p>
+    <p>段落标签</p>
+    <p id="d1">段落标签</p>
+    <p class="c1">段落标签</p>
+    <p class="c1">段落标签5</p>
+    <input type="text" name="uname">
+    <input type="radio" name="gender" value="male">
+    <input type="radio" name="gender" value="female">
+    <button onclick="show()">获取文本框内容</button>
+
+    <script>
+        <!--根据标签取元素-->
+        var elems = document.getElementsByTagName("p");
+        console.log(elems);
+        console.log(elems[0]);
+
+        // 根据类型取元素
+        var elems2 = document.getElementsByClassName("c1");
+        console.log(elems2);
+        console.log(elems2[0]);
+        elems2[0].innerHTML = "<strong>动态修改标签内容</strong>";
+        elems2[1].innerText = "<strong>动态修改标签内容</strong>";
+
+        // 根据ID获取
+        var elems3 = document.getElementById("d1");
+        elems3.innerHTML = "<strong>动态修改标签内容</strong>";
+
+        // 获取表单元素
+        var gender = document.getElementsByName("gender");
+        console.log(gender);
+
+        function show() {
+            var input = document.getElementsByName("uname")[0];
+            console.log(input.value);
+        }
+
+
+    </script>
+
+</body>
+</html>

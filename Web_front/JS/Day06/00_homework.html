@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../web.ico" type="image/x-icon">
+</head>
+<body>
+    <label>
+        <input type="text" name="uname">
+    </label>
+    <button onclick="validate()">验证</button>
+    <div></div>
+    <script>
+        function validate() {
+            var input = document.getElementsByTagName("input")[0];
+            var div = document.getElementsByTagName("div")[0];
+
+            //1. 获取用户名
+            var uname = input.value;
+
+            //2. 验证长度是否在6-18位之间
+            if (uname.length >= 6 && uname.length <= 18) {
+                //3. 显示验证结果
+                div.innerHTML = "用户名合法";
+                div.style.color = "green";
+            } else {
+                div.innerHTML = "用户名不合法";
+                div.style.color = "red"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
